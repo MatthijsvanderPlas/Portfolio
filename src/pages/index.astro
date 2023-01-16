@@ -1,81 +1,65 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+import { Picture } from '@astrojs/image/components'
+
+const portImage = 'image006.png'
+
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
-
+<!DOCTYPE html>
+<html lang="en">
+	<Head title="Portfolio" />
+  <body>
+    <main class="flex justify-center mx-auto">
+      <div class:list={["absolute", "top-0", "right-0", "w-0", "h-0", "triangle_right"]}></div>
+      <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex ">
+        <div class="relative top-40">
+          <h1 class=" px-8 pt-8 text-6xl font-bold  text-white">Hi,<br> I'm Matt!</h1>
+          <p class="text-2xl p-4 text-white w-[30ch]">Front End Developer </p>
+        </div>
+      </div>
+      <svg height="600" width="400">
+        <Picture src={portImage} widths={[400]} sizes="" aspectRatio="4:3" formats={['avif', 'jpeg','png','webp']} class="min-[600px]:hidden relative top-[600px] right-[-40px] object-contain triangle_photo" alt="developer"/>
+      </svg>
+    </main>
+  </body>
+</html>
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+html {
+  background-color: #efefef;
+  overflow-x: hidden;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.triangle_right {
+  z-index: -10;
+  border-left: 400px solid transparent;
+  border-right: 400px solid #2D3F4E;
+  border-bottom: 300px solid transparent;
+  border-top: 300px solid transparent;
+  
+  display: inline-block;
+  transform: translateX(10%) translateY(-65%);
+  }
+
+.triangle_photo {
+  object-position: ;
+  clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+}
+
+.triangle_left {
+  background-color: #2D3F4E;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  }
+
+  @media only screen and (min-width: 600px) {
+    .triangle_left {
+      display: none;
+    }
+
+    .triangle_right {
+      display: none;
+    }
+  }
 </style>
