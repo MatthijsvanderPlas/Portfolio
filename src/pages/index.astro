@@ -18,14 +18,14 @@ const portImage = '/image006.png'
         <div class="relative top-40">
           <h1 class=" px-8 pt-8 text-5xl font-bold  text-white">Hi,<br> I'm Matt!</h1>
           <p class="text-2xl p-4 text-white w-[30ch]">Front End Developer, Web Developer</p>
-          <div class="flex justify-center items-left mx-10 mt-8 flex-col">
-            <button class="btn bg-orange-500 btn-wide text-lg text-[#13181d]">Contact Me!</button><br>
-            <a href="/assets/CV-2023.pdf" download="/assets/CV-2023.pdf"><button class="btn bg-yellow-500 btn-wide text-lg text-[#13181d]">Download CV<Icon pack='mdi' name='download' size={'23px'} class="mx-2" /></button></a>
+          <div class="flex ml-6 mt-8 flex-col">
+            <button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]">Contact Me!</button><br>
+            <a href="/assets/CV-2023.pdf" download="/assets/CV-2023.pdf"><button class="btn bg-yellow-500 w-[225px] text-lg text-[#13181d]">Download CV<Icon pack='mdi' name='download' size={'23px'}  /></button></a>
           </div>
         </div>
       </div>
       <svg height="600" width="400">
-        <Picture loading={"eager"} src={portImage} widths={[400]} sizes="" aspectRatio="4:3" formats={['avif', 'jpeg','png','webp']} class="min-[600px]:hidden relative top-[600px] right-[-40px] bg-[#2D3F4E] object-contain triangle_photo" alt="developer"/>
+        <Picture loading={"eager"} src={portImage} widths={[400]} sizes="" aspectRatio="4:3" formats={['avif', 'jpeg','png','webp']} class="min-[600px]:hidden relative top-[600px] right-[-40px]  bg-[#2D3F4E] object-contain triangle_photo" alt="developer"/>
       </svg>
     </main>
   </body>
@@ -64,6 +64,7 @@ a {
   }
 
 .triangle_photo {
+  object-fit: scale-down;
   clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
 }
 
