@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Head from "../components/Head.astro";
 import { Picture } from '@astrojs/image/components'
+import { Icon } from 'astro-icon'
 
 const portImage = '/image006.png'
 
@@ -12,15 +13,19 @@ const portImage = '/image006.png'
 	<Head title="Portfolio" />
   <body>
     <main class="flex justify-center mx-auto">
-      <div class:list={["absolute", "top-0", "right-0", "w-0", "h-0", "triangle_right"]}></div>
+      <div class="absolute top-0 right-0 w-0 h-0 triangle_right"></div>
       <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex ">
         <div class="relative top-40">
-          <h1 class=" px-8 pt-8 text-6xl font-bold  text-white">Hi,<br> I'm Matt!</h1>
-          <p class="text-2xl p-4 text-white w-[30ch]">Front End Developer</p>
+          <h1 class=" px-8 pt-8 text-5xl font-bold  text-white">Hi,<br> I'm Matt!</h1>
+          <p class="text-2xl p-4 text-white w-[30ch]">Front End Developer, Web Developer</p>
+          <div class="flex justify-center items-left mx-10 flex-col">
+            <button class="btn bg-orange-500 btn-wide text-lg text-[#13181d]">Contact Me!</button><br>
+            <a href="/assets/CV-2023.pdf" download="/assets/CV-2023.pdf"><button class="btn bg-yellow-500 btn-wide text-lg text-[#13181d]">Download CV<Icon pack='mdi' name='download' size={'23px'} class="mx-2" /></button></a>
+          </div>
         </div>
       </div>
       <svg height="600" width="400">
-        <Picture loading={"eager"} src={portImage} widths={[400]} sizes="" aspectRatio="4:3" formats={['avif', 'jpeg','png','webp']} class="min-[600px]:hidden relative top-[600px] right-[-40px] object-contain triangle_photo" alt="developer"/>
+        <Picture loading={"eager"} src={portImage} widths={[400]} sizes="" aspectRatio="4:3" formats={['avif', 'jpeg','png','webp']} class="min-[600px]:hidden relative top-[600px] right-[-40px] bg-[#2D3F4E] object-contain triangle_photo" alt="developer"/>
       </svg>
     </main>
   </body>
@@ -30,6 +35,11 @@ html {
   background-color: #efefef;
   overflow-x: hidden;
   font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+}
+a {
+  padding: 0;
+  margin: 0;
 }
 
 .triangle_right {
@@ -44,7 +54,6 @@ html {
   }
 
 .triangle_photo {
-  object-position: ;
   clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
 }
 
