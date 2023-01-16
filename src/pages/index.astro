@@ -1,10 +1,9 @@
 ---
-import Footer from "../components/Footer.astro";
 import Head from "../components/Head.astro";
-import { Picture } from '@astrojs/image/components'
+import Navbar from '../components/Navbar.svelte'
 import { Icon } from 'astro-icon'
-
-const portImage = '/image006.png'
+import { Image } from '@astrojs/image/components'
+import portImage from '../../public/image006.png'
 
 ---
 
@@ -12,22 +11,29 @@ const portImage = '/image006.png'
 <html lang="en">
 	<Head title="Portfolio" />
   <body>
+    <Navbar client:load/>
     <main class="flex justify-center mx-auto">
       <div class="absolute top-0 right-0 w-0 h-0 triangle_right"></div>
-      <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex">
-        <div class="relative top-40">
-          <h1 class=" px-8 pt-8 text-5xl font-bold  text-white">Hi,<br> I'm Matt!</h1>
-          <p class="text-2xl p-4 text-white w-[30ch]">Front End Developer, Web Developer</p>
-          <div class="flex ml-6 mt-8 flex-col">
-            <button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]">Contact Me!</button><br>
-            <a href="/assets/CV-2023.pdf" download="/assets/CV-2023.pdf"><button class="btn bg-yellow-500 w-[225px] text-lg text-[#13181d]">Download CV<Icon pack='mdi' name='download' size={'23px'}  /></button></a>
-          </div>
+      <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex"></div>
+      <div class="relative left-52 top-40">
+        <h1 class=" px-8 pt-8 text-5xl font-bold  text-white">Hi,<br> I'm Matt!</h1>
+        <p class="text-2xl p-4 text-white w-[30ch]">Front End Developer, Web Developer</p>
+        <div class="flex ml-6 mt-8 flex-col">
+          <button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]">Contact</button><br>
+          <a href="/assets/CV-2023.pdf" download="/assets/CV-2023.pdf"><button class="btn bg-yellow-500 w-[225px] text-lg text-[#13181d]">Download CV<Icon pack='mdi' name='download' size={'23px'}  /></button></a>
         </div>
       </div>
       <svg height="600" width="400">
-        <Picture loading={"eager"} src={portImage} widths={[400]} sizes="" aspectRatio="4:3" formats={['avif', 'jpeg','png','webp']} class="min-[600px]:hidden relative top-[600px] right-[-40px]  bg-[#2D3F4E] object-contain triangle_photo" alt="developer"/>
+        <Image loading={"eager"} src={portImage} format={'webp','avif','png','jpeg'} class="min-[600px]:hidden relative top-[600px] right-44  bg-[#2D3F4E] object-contain triangle_photo" alt="developer"/>
       </svg>
     </main>
+    <section id="about" class="relative top-[500px]">
+      Random shit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque officiis recusandae adipisci, consequuntur earum temporibus culpa labore molestiae amet. Illo dignissimos mollitia deleniti officia id consequatur quasi vitae iure aut architecto sunt autem facilis, vero assumenda dolorem aliquid. Aliquid, quam. Sequi vel, harum voluptate commodi quasi eius accusantium id dolorem, officiis odio deleniti ipsam non corporis est animi nostrum. Vero dolor porro nisi corrupti, quod totam voluptatem architecto possimus qui nesciunt ipsam odit id placeat veritatis? Delectus totam eum facilis iusto nam adipisci dolor dolores corrupti libero alias nisi praesentium autem eligendi ducimus, dicta nulla voluptatem illum aspernatur optio beatae?
+    </section>
+
+    <section id="projects" class="relative top-[1000px]">
+      Random shit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque officiis recusandae adipisci, consequuntur earum temporibus culpa labore molestiae amet. Illo dignissimos mollitia deleniti officia id consequatur quasi vitae iure aut architecto sunt autem facilis, vero assumenda dolorem aliquid. Aliquid, quam. Sequi vel, harum voluptate commodi quasi eius accusantium id dolorem, officiis odio deleniti ipsam non corporis est animi nostrum. Vero dolor porro nisi corrupti, quod totam voluptatem architecto possimus qui nesciunt ipsam odit id placeat veritatis? Delectus totam eum facilis iusto nam adipisci dolor dolores corrupti libero alias nisi praesentium autem eligendi ducimus, dicta nulla voluptatem illum aspernatur optio beatae?
+    </section>
   </body>
 </html>
 <style>
@@ -53,7 +59,7 @@ a {
 }
 
 .triangle_right {
-  z-index: -10;
+  z-index: -20;
   border-left: 400px solid transparent;
   border-right: 400px solid #2D3F4E;
   border-bottom: 300px solid transparent;
@@ -64,11 +70,11 @@ a {
   }
 
 .triangle_photo {
-  object-fit: scale-down;
   clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
 }
 
 .triangle_left {
+  z-index: -20;
   background-color: #2D3F4E;
   clip-path: polygon(0 0, 0% 100%, 100% 50%);
   }
