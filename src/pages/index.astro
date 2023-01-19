@@ -11,16 +11,18 @@ import portImage from '../../public/image006.png';
 <html lang="en">
   <Head title="Portfolio" />
   <body>
-    <Navbar client:idle />
+    <header>
+      <Navbar client:idle />
+    </header>
     <main class="flex relative justify-center min-h-[1120px] mx-auto">
       <div class="absolute top-0 right-0 w-0 h-0 triangle_right"></div>
       <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex"></div>
-      <div class="absolute top-40">
+      <div class="absolute top-40 left-0">
         <h1 class="px-8 pt-8 text-5xl font-bold text-white">
           Hi,<br /> I'm Matt!
+          <p class="relative text-2xl p-4 left-[-20px] text-white w-[30ch]">Front End Developer, Web Developer</p>
         </h1>
-        <p class="text-2xl p-6 text-white w-[30ch]">Front End Developer, Web Developer</p>
-        <div class="flex ml-6 mt-8 flex-col">
+        <div class="flex ml-6 mt-4 flex-col">
           <button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]">Contact</button><br />
           <a href="/assets/CV-2023.pdf" download="/assets/CV-2023.pdf"
             ><button class="btn bg-yellow-500 w-[225px] text-lg text-[#13181d]"
@@ -29,7 +31,7 @@ import portImage from '../../public/image006.png';
           >
         </div>
       </div>
-      <svg height="800" width="350">
+      <figure>
         <Image
           loading={'lazy'}
           src={portImage}
@@ -37,10 +39,12 @@ import portImage from '../../public/image006.png';
           class="w-[350px] h-[550px] min-[600px]:hidden absolute top-[625px] right-[-25px] bg-[#2D3F4E] object-contain triangle_photo"
           alt="developer"
         />
-      </svg>
+        </figure>
     </main>
     <About />
-  </body><style>
+  </body>
+  
+  <style>
     :root {
       background-color: #efefef;
     }
