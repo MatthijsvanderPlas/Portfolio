@@ -5,6 +5,9 @@ import Navbar from '../components/Navbar.svelte';
 import {Icon} from 'astro-icon';
 import {Image} from '@astrojs/image/components';
 import portImage from '../../public/image006.png';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -14,13 +17,16 @@ import portImage from '../../public/image006.png';
     <header>
       <Navbar client:visible />
     </header>
-    <main class="flex relative justify-center min-h-[1120px] mx-auto">
+    <main class="flex relative justify-center min-h-[720px] mx-auto">
+      <p id="home"></p>
       <div class="absolute top-0 right-0 w-0 h-0 triangle_right"></div>
       <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex"></div>
       <div class="absolute top-40 left-0">
         <h1 class="px-8 pt-8 text-5xl font-bold text-white">
           Hi,<br /> I'm Matt!
-          <p class="relative text-2xl p-4 left-[-20px] text-white w-[30ch]">Front End Developer, Web Developer</p>
+          <p class="relative text-2xl p-4 left-[-30px] text-white w-[28ch]">
+            Full Stack Developer, Front End Developer
+          </p>
         </h1>
         <div class="flex ml-6 mt-4 flex-col">
           <button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]">Contact</button><br />
@@ -39,62 +45,65 @@ import portImage from '../../public/image006.png';
           class="w-[350px] h-[550px] min-[600px]:hidden absolute top-[625px] right-[-25px] bg-[#2D3F4E] object-contain triangle_photo"
           alt="developer"
         />
-        </figure>
+      </figure>
     </main>
     <About />
-  </body>
-  
-  <style>
-    :root {
-      background-color: #efefef;
-    }
+    <Skills />
+    <Projects />
+    <div class="h-12"></div>
+    <Footer />
+    <style>
+      :root {
+        background-color: #efefef;
+      }
 
-    html {
-      overflow-x: hidden;
-      max-width: 100%;
-      font-family: 'Josefin Sans', sans-serif;
-      box-sizing: border-box;
-    }
-    body {
-      max-width: 100vw;
-      position: relative;
-      overflow-x: hidden;
-    }
+      html {
+        overflow-x: hidden;
+        max-width: 100%;
+        font-family: 'Josefin Sans', sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        max-width: 100vw;
+        position: relative;
+        overflow-x: hidden;
+      }
 
-    a {
-      padding: 0;
-      margin: 0;
-    }
-
-    .triangle_right {
-      z-index: -20;
-      border-left: 400px solid transparent;
-      border-right: 400px solid #2d3f4e;
-      border-bottom: 300px solid transparent;
-      border-top: 300px solid transparent;
-
-      display: inline-block;
-      transform: translateX(10%) translateY(-65%);
-    }
-
-    .triangle_photo {
-      clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
-    }
-
-    .triangle_left {
-      z-index: -20;
-      background-color: #2d3f4e;
-      clip-path: polygon(0 0, 0% 100%, 100% 50%);
-    }
-
-    @media only screen and (min-width: 600px) {
-      .triangle_left {
-        display: none;
+      a {
+        padding: 0;
+        margin: 0;
       }
 
       .triangle_right {
-        display: none;
+        z-index: -20;
+        border-left: 400px solid transparent;
+        border-right: 400px solid #2d3f4e;
+        border-bottom: 300px solid transparent;
+        border-top: 300px solid transparent;
+
+        display: inline-block;
+        transform: translateX(10%) translateY(-65%);
       }
-    }
-  </style>
+
+      .triangle_photo {
+        clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+      }
+
+      .triangle_left {
+        z-index: -20;
+        background-color: #2d3f4e;
+        clip-path: polygon(0 0, 0% 100%, 100% 50%);
+      }
+
+      @media only screen and (min-width: 600px) {
+        .triangle_left {
+          display: none;
+        }
+
+        .triangle_right {
+          display: none;
+        }
+      }
+    </style>
+  </body>
 </html>

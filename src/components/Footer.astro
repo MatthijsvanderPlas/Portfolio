@@ -1,21 +1,33 @@
 ---
+import {Icon} from 'astro-icon';
 ---
 
+<script is:inline>
+  const show = window.scrollY;
+  let vis = 'hidden';
+  if (show !== 0) {
+    vis = 'visible';
+  }
+</script>
+
 <footer
-  class="absolute bottom-0 footer flex gap-40 justify-center w-full p-10 bg-base-200 text-base-content h-48"
+  class:list={[
+    'fixed clear-both z-50 bottom-0 footer flex gap-40 items-center border-t bg-[#efefef]  min-h-12 w-ful h-12',
+  ]}
 >
-  <div>
-    <span class="footer-title">Services</span>
-    <a class="link link-hover">Branding</a>
-    <a class="link link-hover">Design</a>
-    <a class="link link-hover">Marketing</a>
-    <a class="link link-hover">Advertisement</a>
-  </div>
-  <div>
-    <span class="footer-title">Company</span>
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
+  <div class="flex justify-around items-center w-full h-12">
+    <a href="https://github.com/MatthijsvanderPlas" target="_blank" class="w-8 h-8"
+      ><Icon name="uil:github" /></a
+    >
+    <a href="https://www.linkedin.com/in/matthijsvanderplas/" target="_blank" class="w-8 h-8"
+      ><Icon name="uil:linkedin" /></a
+    >
+    <a href="#top" class="w-8 h-8"><Icon name="uil:top-arrow-from-top" /></a>
   </div>
 </footer>
+
+<style define:vars="vis">
+  footer {
+    visibility: --var(vis);
+  }
+</style>
