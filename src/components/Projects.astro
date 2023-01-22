@@ -1,7 +1,42 @@
 ---
+import Card from './Card.astro';
 ---
 
 <article id="projects" class="flex flex-col justify-center p-4 text-[#13181d] min-h-screen">
-  <h2 class="text-3xl">Projects</h2>
-  <!-- <Card /> -->
+  <h2 class="text-3xl p-4">Projects</h2>
+  <Card
+    name="Student Dashboard"
+    images={[
+      '../../public/dashboard.png',
+      '../../public/table.png',
+      '../../public/bars.png',
+      '../../public/menu.png',
+    ]}
+    description="Een dashboard om de statistieken van de studenten te laten zien."
+    github="https://github.com/MatthijsvanderPlas/dashboard"
+    live="https://studentdashboard-matt.netlify.app/"
+    techstack="React, Redux, Typescript, Tailwindcss, VisX"
+  />
+  <Card
+    name="Songsaver/Playlist"
+    images={['../../public/songsaver.png', '../../public/about.png', '../../public/list.png']}
+    description="Simpele app waar je je eigen speellijst kan samenstellen en filteren."
+    github="https://github.com/MatthijsvanderPlas/songsaver"
+    live="https://winc-playlist.netlify.app/"
+    techstack="React, Redux, Bulma css"
+  />
+  <Card
+    name="Weer App"
+    images={[
+      '../../public/windzon.png',
+      '../../public/plaats.png',
+      '../../public/lucht.png',
+      '../../public/voorspelling.png',
+      '../../public/weermenu.png',
+    ]}
+    description="Het weerbericht op locatie. "
+    github="https://github.com/MatthijsvanderPlas/songsaver"
+    live="https://winc-playlist.netlify.app/"
+    techstack="React, Redux, Bulma css"
+  />
 </article>

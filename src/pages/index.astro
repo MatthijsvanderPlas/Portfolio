@@ -8,6 +8,7 @@ import portImage from '../../public/image006.png';
 import Projects from '../components/Projects.astro';
 import Skills from '../components/Skills.astro';
 import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.svelte';
 ---
 
 <!DOCTYPE html>
@@ -29,7 +30,9 @@ import Footer from '../components/Footer.astro';
           </p>
         </h1>
         <div class="flex ml-6 mt-4 flex-col">
-          <button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]">Contact</button><br />
+          <a href="#contact"
+            ><button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]">Contact</button></a
+          ><br />
           <a href="/assets/CV-2023.pdf" download="/assets/CV-2023.pdf"
             ><button class="btn bg-yellow-500 w-[225px] text-lg text-[#13181d]"
               >Download CV<Icon pack="mdi" name="download" size={'23px'} /></button
@@ -50,6 +53,7 @@ import Footer from '../components/Footer.astro';
     <About />
     <Skills />
     <Projects />
+    <Contact client:visible />
     <div class="h-12"></div>
     <Footer />
     <style>

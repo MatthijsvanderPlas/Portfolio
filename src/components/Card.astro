@@ -1,0 +1,33 @@
+---
+import Carousel from './Carousel.svelte';
+
+interface Props {
+  name: string;
+  images: string[];
+  description: string;
+  github: string;
+  live: string;
+  techstack: string;
+}
+
+const {name, images, description, github, live, techstack} = Astro.props;
+---
+
+<script is:inline></script>
+
+<div class="card w-full bg-base-100 shadow-xl my-6">
+  <figure class="flex p-6 w-full h-[250px]">
+    <Carousel client:visible images={images} title={name} />
+  </figure>
+  <div class="text-xs px-2">Stack: {techstack}</div>
+  <div class="card-body">
+    <h2 class="card-title">
+      {name}
+    </h2>
+    <p class="text-lg pb-4">{description}</p>
+    <div class="btn-group justify-center">
+      <a href={github} target="_blank" class="btn hover:btn-active">Github</a>
+      <a href={live} target="_blank" class="btn hover:btn-active">Live site</a>
+    </div>
+  </div>
+</div>

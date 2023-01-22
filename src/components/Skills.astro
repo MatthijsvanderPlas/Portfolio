@@ -2,8 +2,11 @@
 import Icon from './Icon.astro';
 ---
 
-<article id="skills" class="flex flex-col p-4 justify-center bg-[#2D3E4F] text-[#efefef] min-h-screen">
-  <h2 class="text-3xl w-full ">Skills</h2>
+<article
+  id="skills"
+  class="flex flex-col p-4 justify-center bg-[#2D3E4F] text-[#efefef] min-h-screen"
+>
+  <h2 class="text-3xl p-4 w-full">Skills</h2>
   <div tabindex="0" class="collapse collapse-arrow">
     <div class="collapse-title text-xl">Huidige Skillset:</div>
     <p class="collapse-content text-lg">
@@ -31,7 +34,7 @@ import Icon from './Icon.astro';
     <Icon name="mdi:language-javascript" subtext="JavaScript" size={12} color="text-[#F0DB4F]" />
     <Icon name="mdi:language-typescript" subtext="TypeScript" size={12} color="text-[#007acc]" />
     <Icon name="logos:python" subtext="Python" size={12} />
-    <Icon name="carbon:sql" subtext="SQL" size={12} color="text-[#00758F]"/>
+    <Icon name="carbon:sql" subtext="SQL" size={12} color="text-[#00758F]" />
     <Icon name="mdi:react" subtext="React" size={12} color="text-[#62DBFB]" />
     <Icon name="simple-icons:redux" subtext="Redux" size={12} color="text-[#764abc]" />
     <Icon name="mdi:git" subtext="Git" size={12} color="text-[#F1502F]" />
@@ -39,12 +42,16 @@ import Icon from './Icon.astro';
   </div>
   <div tabindex="0" class="collapse collapse-arrow pt-6">
     <h3 class="collapse-title text-xl">In Progress:</h3>
-    <p class="collapse-content text-lg">Onderstaande talen/frameworks zal ik binnenkort toevoegen aan mijn skillset.</p>
+    <p class="collapse-content text-lg">
+      Onderstaande talen/frameworks zal ik binnenkort toevoegen aan mijn skillset.
+    </p>
   </div>
-   <div class="grid grid-cols-4 gap-4 auto-rows-max">
+  <div class="grid grid-cols-4 gap-4 auto-rows-max">
     <Icon name="teenyicons:c-sharp-solid" subtext="C-Sharp" size={12} color="text-[#264de4]" />
+    <Icon name="mdi:dot-net" subtext=".NET" size={12} />
     <Icon name="la:node" subtext="NodeJS" size={12} color="text-[#3c873a]" />
-    <Icon name="logos:express" subtext="Express" size={12} color="text-[#efefef]" />
-   </div>
+    <Icon name="logos:nextjs-icon" subtext="Next.JS" size={12} />
+    <Icon name="logos:mongodb" subtext="MongoDB" size={12} />
+    <Icon name="logos:postgresql" subtext="PostgreSQL" size={12} />
+  </div>
 </article>
-
