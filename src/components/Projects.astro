@@ -1,4 +1,17 @@
 ---
+import dashboard from '../../public/dashboard.png'
+import table from  '../../public/table.png'
+import bars from '../../public/bars.png'
+import menu from '../../public/menu.png'
+import songsaver from '../../public/songsaver.png'
+import about from '../../public/about.png'
+import list from '../../public/list.png'
+import windzon from '../../public/windzon.png'
+import plaats from '../../public/plaats.png'
+import voorspelling from '../../public/voorspelling.png'
+import lucht from '../../public/lucht.png'
+import weermenu from '../../public/weermenu.png'
+
 import Card from './Card.astro';
 ---
 
@@ -7,10 +20,10 @@ import Card from './Card.astro';
   <Card
     name="Student Dashboard"
     images={[
-      '../../public/dashboard.png',
-      '../../public/table.png',
-      '../../public/bars.png',
-      '../../public/menu.png',
+      dashboard,
+      table,
+      bars,
+      menu,
     ]}
     description="Een dashboard om de statistieken van de studenten te laten zien."
     github="https://github.com/MatthijsvanderPlas/dashboard"
@@ -19,7 +32,7 @@ import Card from './Card.astro';
   />
   <Card
     name="Songsaver/Playlist"
-    images={['../../public/songsaver.png', '../../public/about.png', '../../public/list.png']}
+    images={[songsaver, list ,about]}
     description="Simpele app waar je je eigen speellijst kan samenstellen en filteren."
     github="https://github.com/MatthijsvanderPlas/songsaver"
     live="https://winc-playlist.netlify.app/"
@@ -28,11 +41,11 @@ import Card from './Card.astro';
   <Card
     name="Weer App"
     images={[
-      '../../public/windzon.png',
-      '../../public/plaats.png',
-      '../../public/lucht.png',
-      '../../public/voorspelling.png',
-      '../../public/weermenu.png',
+      plaats,
+      voorspelling,
+      windzon,
+      lucht,
+      weermenu,
     ]}
     description="Het weerbericht op locatie. "
     github="https://github.com/MatthijsvanderPlas/songsaver"

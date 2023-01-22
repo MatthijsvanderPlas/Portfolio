@@ -17,6 +17,6 @@
 </script>
 <button class="btn pr-[5px]" on:click={prev}><Icon icon="ooui:previous-ltr" /></button>
 {#each [images[index]] as src} 
-  <img class="object-contain" id={index} {src} alt={title} />
+  <img class="object-contain" id={index} src={src} alt={title} />
 {/each}
 <button class="btn pl-[5px]" on:click={next}><Icon icon="ooui:next-ltr" /></button>

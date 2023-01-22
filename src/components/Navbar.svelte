@@ -16,7 +16,7 @@ $: if (y >= 100 && y <= 260 ) {
   primary = 'black'
 } else if (y >= 1100 && y <= 1350) {
   primary = 'black'
-} else if (y >= 2025) {
+} else if (y >= 2370 && y <= 4100) {
   primary = 'black'
 }
  else {
