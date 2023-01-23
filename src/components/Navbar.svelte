@@ -53,7 +53,7 @@ $: if (y >= 100 && y <= 260 ) {
     <Logo />
     <ul class="w-full flex justify-center">
     {#each menuItems as item}
- <a href='#{item}' class="inline text-2xl p-2 md:p-6 lg:p-8 font-bold"  on:click={handleClick} >{item.charAt(0).toUpperCase() + item.slice(1)}</a>
+ <li><a href='#{item}' class="inline text-2xl p-2 md:p-6 lg:p-8 font-bold"  on:click={handleClick} >{item.charAt(0).toUpperCase() + item.slice(1)}</a></li>
     {/each}
 </ul>
 </div>
