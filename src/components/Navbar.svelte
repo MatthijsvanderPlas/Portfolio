@@ -1,6 +1,6 @@
 <script>
   import { Hamburger } from 'svelte-hamburgers'
-  import Logo from '../../public/logo.svelte'
+  import Logo from '@public/logo.svelte'
   let open;
 
   const menuItems = ['about','skills', 'projects','contact']
@@ -17,7 +17,7 @@ $: if (y >= 100 && y <= 260 ) {
   primary = 'black'
 } else if (y >= 1100 && y <= 1350) {
   primary = 'black'
-} else if (y >= 2370 && y <= 4100) {
+} else if (y >= 2020 && y <= 3750) {
   primary = 'black'
 }
  else {
@@ -48,12 +48,12 @@ $: if (y >= 100 && y <= 260 ) {
    </section>
 
 {:else}
-   <nav class="fixed top-0 left-0 z-50 min-h-[75px] h-[75px] flex items-center w-full {bgColor}">
+   <nav class="fixed top-0 left-0 z-50 min-h-[75px] h-[75px] flex items-center w-full drop-shadow-lg shadow-[#2D3E4F] {bgColor}">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
     <Logo />
     <ul class="w-full flex justify-center">
     {#each menuItems as item}
- <a href='#{item}' class="inline text-2xl p-2 font-bold"  on:click={handleClick} >{item.charAt(0).toUpperCase() + item.slice(1)}</a>
+ <a href='#{item}' class="inline text-2xl p-2 md:p-6 lg:p-8 font-bold"  on:click={handleClick} >{item.charAt(0).toUpperCase() + item.slice(1)}</a>
     {/each}
 </ul>
 </div>
