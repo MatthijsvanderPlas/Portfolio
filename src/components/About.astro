@@ -1,3 +1,7 @@
+---
+import lighthouse from '@public/lighthouse.png'
+---
+
 <article
   id="about"
   class="relative flex flex-col min-[600px]:top-[-250px] p-4 min-[600px]:max-w-4xl min-[600px]:justify-center min-[600px]:items-start min-[600px]:mx-auto text-[#13181d] min-[600px]:min-h-screen"
@@ -30,9 +34,11 @@
   >
     Deze site gemaakt met Astro en Svelte. Uitganspunt: goed werkende snelle
     site die responsive is met minimale JavaScript.<span
-      class="hidden min-[600xp]:inline min-[600px]:text-2xl lg:text-3xl"
+      class="hidden min-[600px]:inline min-[600px]:text-2xl lg:text-3xl min-[600px]:pt-6"
     >
+      <br />
       Focus ligt op Performance, Accessibility, Best Practices en SEO.
     </span>
   </p>
+  <img src={lighthouse.src} alt="Lighthouse score" class="p-4" />
 </article>
