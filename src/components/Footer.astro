@@ -1,12 +1,12 @@
 ---
-import {Icon} from 'astro-icon';
+import { Icon } from 'astro-icon'
 ---
 
 <script is:inline>
-  const show = window.scrollY;
-  let vis = 'hidden';
+  const show = window.scrollY
+  let vis = 'hidden'
   if (show !== 0) {
-    vis = 'visible';
+    vis = 'visible'
   }
 </script>
 
@@ -16,13 +16,21 @@ import {Icon} from 'astro-icon';
   ]}
 >
   <div class="flex justify-around items-center w-full max-w-5xl mx-auto h-12">
-    <a href="https://github.com/MatthijsvanderPlas" target="_blank" title="Github" class="w-8 h-8"
-     ><Icon name="uil:github" alt="Github" /></a
+    <a
+      href="https://github.com/MatthijsvanderPlas"
+      target="_blank"
+      title="Github"
+      class="w-8 h-8"><Icon name="uil:github" alt="Github" /></a
     >
-    <a href="https://www.linkedin.com/in/matthijsvanderplas/" target="_blank" title="LinkedIn" class="w-8 h-8"
-      ><Icon name="uil:linkedin"  alt="LinkedIn"/></a
+    <a
+      href="https://www.linkedin.com/in/matthijsvanderplas/"
+      target="_blank"
+      title="LinkedIn"
+      class="w-8 h-8"><Icon name="uil:linkedin" alt="LinkedIn" /></a
     >
-    <a href="#top" class="w-8 h-8" title="To Top"><Icon name="uil:top-arrow-from-top" /></a>
+    <a href="#top" class="w-8 h-8" title="To Top"
+      ><Icon name="uil:top-arrow-from-top" /></a
+    >
   </div>
 </footer>
 

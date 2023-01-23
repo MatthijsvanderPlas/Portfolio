@@ -1,18 +1,18 @@
 ---
-import {Icon} from 'astro-icon';
+import { Icon } from 'astro-icon'
 
 interface Props {
-  name: string;
-  subtext: string;
-  description?: string;
-  size?: number;
-  color?: string;
+  name: string
+  subtext: string
+  description?: string
+  size?: number
+  color?: string
 }
 
-const {name, subtext, size = 16, color, description} = Astro.props;
+const { name, subtext, size = 16, color, description } = Astro.props
 
-const width = 'w-' + size;
-const heigth = 'h-' + size;
+const width = 'w-' + size
+const heigth = 'h-' + size
 ---
 
 <figure class="flex flex-col justify-center items-center" title={description}>

@@ -1,17 +1,16 @@
 ---
-import Head from '../components/Head.astro';
-import About from '../components/About.astro';
-import Navbar from '../components/Navbar.svelte';
-import {Icon} from 'astro-icon';
-import {Image} from '@astrojs/image/components';
-import portImage from '@public/image006.png';
-import bgImage from '@public/background.png';
-import Projects from '../components/Projects.astro';
-import Skills from '../components/Skills.astro';
-import Footer from '../components/Footer.astro';
-import Contact from '../components/Contact.svelte';
+import Head from '../components/Head.astro'
+import About from '../components/About.astro'
+import Navbar from '../components/Navbar.svelte'
+import { Icon } from 'astro-icon'
+import { Image } from '@astrojs/image/components'
+import portImage from '@public/image006.png'
+import bgImage from '@public/background.png'
+import Projects from '../components/Projects.astro'
+import Skills from '../components/Skills.astro'
+import Footer from '../components/Footer.astro'
+import Contact from '../components/Contact.svelte'
 ---
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,12 +19,27 @@ import Contact from '../components/Contact.svelte';
     <header>
       <Navbar client:visible />
     </header>
-    <main class="flex relative justify-center min-h-[720px] min-[600px]:bg-[#2D3E4F]">
+    <main
+      class="flex relative justify-center min-h-[720px] min-[600px]:min-h-[0px] min-[600px]:bg-[#2D3E4F]"
+    >
       <p id="home"></p>
-       <Image id="bgImage" loading={'eager'} quality={50} src={bgImage.src} width={4724/2} height={3149/2} format={('webp', 'avif', 'png')} class="hidden absolute w-full h-full object-scale-down opacity-50 bg-[#2D3e4F] mix-blend-lighten min-[600px]:inline" alt="Developer" />
+      <Image
+        id="bgImage"
+        loading={'eager'}
+        quality={50}
+        src={bgImage.src}
+        width={4724 / 2}
+        height={3149 / 2}
+        format={('webp', 'avif', 'png')}
+        class="hidden absolute w-full h-full object-scale-down opacity-50 bg-[#2D3e4F] mix-blend-lighten min-[600px]:inline"
+        alt="Developer"
+      />
       <div class="absolute top-0 right-0 w-0 h-0 triangle_right"></div>
-      <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex"></div>
-      <div class="absolute min-[600px]:relative min-[600px]:max-w-7xl min-[600px]:min-h-screen min-[600px]:left-[-100px] top-40 left-0">
+      <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex">
+      </div>
+      <div
+        class="absolute min-[600px]:relative min-[600px]:max-w-7xl min-[600px]:min-h-screen min-[600px]:left-[-100px] top-40 left-0"
+      >
         <h1 class="px-8 pt-8 text-5xl font-bold text-white">
           Hi,<br /> I'm Matt!
           <p class="relative text-2xl p-4 left-[-30px] text-white w-[28ch]">
@@ -34,11 +48,17 @@ import Contact from '../components/Contact.svelte';
         </h1>
         <div class="flex ml-6 mt-4 flex-col">
           <a href="#contact"
-            ><button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]">Contact</button></a
+            ><button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]"
+              >Contact</button
+            ></a
           ><br />
           <a href="/assets/CV-2023.pdf" download="/assets/CV-2023.pdf"
             ><button class="btn bg-yellow-500 w-[225px] text-lg text-[#13181d]"
-              >Download CV<Icon pack="mdi" name="download" size={'23px'} /></button
+              >Download CV<Icon
+                pack="mdi"
+                name="download"
+                size={'23px'}
+              /></button
             ></a
           >
         </div>
