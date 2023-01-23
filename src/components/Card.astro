@@ -15,8 +15,8 @@ const {name, images, description, github, live, techstack} = Astro.props;
 
 <script is:inline></script>
 
-<div class="card w-full bg-base-100 shadow-xl my-6">
-  <figure class="flex p-6 w-full h-[250px]">
+<div class="card w-full lg:max-w-4xl lg:mx-auto bg-base-100 shadow-xl my-6">
+  <figure class="flex p-6 w-full h-[250px] min-[600px]:h-[500px]">
     <Carousel client:visible images={images} title={name} />
   </figure>
   <div class="text-xs px-2">Stack: {techstack}</div>

@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar.svelte';
 import {Icon} from 'astro-icon';
 import {Image} from '@astrojs/image/components';
 import portImage from '../../public/image006.png';
+import largeImage from '../../public/background.png'
 import Projects from '../components/Projects.astro';
 import Skills from '../components/Skills.astro';
 import Footer from '../components/Footer.astro';
@@ -18,11 +19,12 @@ import Contact from '../components/Contact.svelte';
     <header>
       <Navbar client:visible />
     </header>
-    <main class="flex relative justify-center min-h-[720px] mx-auto">
+    <main class="flex relative justify-center min-h-[720px] min-[600px]:bg-[#2D3E4F]">
       <p id="home"></p>
+       <img src={largeImage.src} class="invisible absolute w-full h-full object-scale-down opacity-50 bg-[#2D3e4F] mix-blend-lighten   min-[600px]:visible" alt="Developer">
       <div class="absolute top-0 right-0 w-0 h-0 triangle_right"></div>
       <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex"></div>
-      <div class="absolute top-40 left-0">
+      <div class="absolute min-[600px]:relative min-[600px]:max-w-7xl min-[600px]:min-h-screen min-[600px]:left-[-100px] top-40 left-0">
         <h1 class="px-8 pt-8 text-5xl font-bold text-white">
           Hi,<br /> I'm Matt!
           <p class="relative text-2xl p-4 left-[-30px] text-white w-[28ch]">
