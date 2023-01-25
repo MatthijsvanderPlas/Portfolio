@@ -13,3 +13,5 @@ For the small bits of reactive/javascript I wanted to work with svelte, it has c
 ### End result 
 
 A pretty decent V1.0 that runs extremely fast, responsive for mobile and desktop. Now to add more projects and eventually overhaul the entire site as I progress and learn!
+
+<a href="www.stardash.nl">StarDASH</a>
