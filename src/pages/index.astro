@@ -20,7 +20,7 @@ import Contact from '../components/Contact.svelte'
       <Navbar client:visible />
     </header>
     <main
-      class="flex relative justify-center min-h-[720px] min-[600px]:bg-[#2D3E4F] md:min-h-screen"
+      class="flex relative justify-center min-h-[720px] min-[600px]:bg-[#2D3E4F] min-[600px]:min-h-screen"
     >
       <Image
         id="bgImage"
@@ -37,7 +37,7 @@ import Contact from '../components/Contact.svelte'
       <div class="absolute top-0 left-0 w-[500px] h-[800px] triangle_left flex">
       </div>
       <div
-        class="absolute min-[600px]:max-w-6xl min-[600px]:relative min-[600px]:left-[-100px] top-40 left-0"
+        class="absolute min-[600px]:max-w-6xl min-[600px]:relative min-[600px]:left-[-100px] min-[600px]:top-12 lg:top-40 top-40 left-0"
       >
         <h1 class="px-8 text-5xl font-bold text-white">
           Hi,<br /> I'm Matt!
@@ -47,7 +47,9 @@ import Contact from '../components/Contact.svelte'
             >
           </p>
         </h1>
-        <div class="flex ml-6 mt-4 flex-col">
+        <div
+          class="flex ml-6 mt-4 flex-col min-[600px]:flex-row min-[600px]:gap-6 lg:gap-0 lg:flex-col"
+        >
           <a href="#contact"
             ><button class="btn bg-orange-500 w-[225px] text-lg text-[#13181d]"
               >Contact</button

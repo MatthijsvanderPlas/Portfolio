@@ -48,7 +48,7 @@ $: if (y >= 100 && y <= 260 ) {
    </section>
 
 {:else}
-   <nav class="fixed top-0 left-0 z-50 min-h-[75px] h-[75px] flex items-center w-full drop-shadow-lg shadow-[#2D3E4F] {bgColor}">
+   <nav class="fixed top-0 left-0 z-50 lg:min-h-[75px]  flex items-center w-full drop-shadow-lg shadow-[#2D3E4F] {bgColor}">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
     <Logo />
     <ul class="w-full flex justify-center">
